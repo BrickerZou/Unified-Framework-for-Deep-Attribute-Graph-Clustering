@@ -27,7 +27,8 @@ def train(args, data, logger):
                   'dblp': [30, 1e-4, 50],
                   'reut': [30, 1e-4, 100],
                   'hhar': [30, 1e-3, 50],
-                  'usps': [30, 1e-3, 30]}
+                  'usps': [30, 1e-3, 30],
+                  'cocs': [30, 1e-3, 100]}
     args.pretrain_epoch = param_dict[args.dataset_name][0]
     args.pretrain_lr = param_dict[args.dataset_name][1]
     args.n_input = param_dict[args.dataset_name][2]
