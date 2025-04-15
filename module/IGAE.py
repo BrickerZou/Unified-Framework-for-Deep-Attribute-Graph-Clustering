@@ -28,6 +28,9 @@ class GNNLayer(Module):
         elif name == "reut":
             self.act = nn.LeakyReLU(0.2, inplace=True)
             self.weight = Parameter(torch.FloatTensor(in_features, out_features))
+        else:
+            self.act = nn.Tanh()
+            self.weight = Parameter(torch.FloatTensor(in_features, out_features))
         torch.nn.init.xavier_uniform_(self.weight)
 
     def forward(self, features, adj, active=False):
