@@ -37,7 +37,7 @@ parser.add_argument("-K", "--k", type=int, default=None,
                     help="The k of KNN.")
 parser.add_argument("-T", "--t", type=int, default=None,
                     help="The order in GAT. 'None' denotes don't calculate the matrix M.")
-parser.add_argument("-LS", "--loops", type=int, default=1,
+parser.add_argument("-LS", "--loops", type=int, default=10,
                     help="The Number of training rounds.")
 parser.add_argument("-F", "--feature", dest="feature_type", type=str, default="tensor", choices=["tensor", "npy"],
                     help="The datatype of feature. 'tenor' and 'npy' are available.")
