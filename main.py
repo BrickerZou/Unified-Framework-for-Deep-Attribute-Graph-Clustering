@@ -32,7 +32,7 @@ if __name__ == "__main__":
     logger = logger.MyLogger(args.model_name, log_file_path=f"{args.log_save_path}{time_manager.get_format_time()}-{args.desc}.log")
     logger.info("The key points of this experiment: " + args.desc)
     logger.info(f"random seed: {args.seed}")
-    timer = time_manager.MyTime()
+    # timer = time_manager.MyTime()
 
     # Load data, including features, label, adjacency matrix.
     data = load_data(args.k, args.dataset_path, args.dataset_name,
@@ -48,8 +48,9 @@ if __name__ == "__main__":
     acc_list, nmi_list, ari_list, f1_list = [], [], [], []
     # repeat args.loops rounds
     for i in range(args.loops):
+        print(f"Training loop No.{i + 1}")
         logger.flag(f"Training loop No.{i + 1}")
-        timer.start()
+        # timer.start()
         # call the training function of your specified model
         result = train(args, data, logger)
 
