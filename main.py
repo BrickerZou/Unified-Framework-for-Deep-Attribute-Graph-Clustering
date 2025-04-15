@@ -53,8 +53,8 @@ if __name__ == "__main__":
         # call the training function of your specified model
         result = train(args, data, logger)
 
-        seconds, minutes = timer.stop()
-        logger.info("Time consuming: {}s or {}m".format(seconds, minutes))
+        # seconds, minutes = timer.stop()
+        # logger.info("Time consuming: {}s or {}m".format(seconds, minutes))
 
         # record the max value of each loop
         acc_list, nmi_list, ari_list, f1_list = record_metrics(acc_list, nmi_list, ari_list, f1_list,
@@ -74,4 +74,5 @@ if __name__ == "__main__":
     logger.info("Total loops: {}".format(args.loops))
     logger.flag("Mean value:")
     logger.info(cal_mean_std(acc_list, nmi_list, ari_list, f1_list))
+    print(cal_mean_std(acc_list, nmi_list, ari_list, f1_list))
     logger.info("Training over! Punch out!")
