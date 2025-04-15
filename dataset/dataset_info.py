@@ -115,13 +115,13 @@ def get_dataset_info(args):
         args.pretrain_epoch = 30
         args.input_dim = 1703
     elif name == "cocs":
-        args.clusters = 5
+        args.clusters = 15
         args.nodes = 18333
         args.lr = 1e-3
         args.max_epoch = 50
         args.pretrain_lr = 1e-3
         args.pretrain_epoch = 30
-        args.input_dim = 1703
+        args.input_dim = 6805
     elif name == "corafull":
         args.clusters = 70
         args.nodes = 19793
