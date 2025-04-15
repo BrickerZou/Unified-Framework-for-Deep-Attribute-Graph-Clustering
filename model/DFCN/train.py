@@ -29,7 +29,9 @@ def train(args, data, logger):
                   'dblp': [200, 1e-4, 50],
                   'reut': [200, 1e-4, 100],
                   'hhar': [200, 1e-3, 50],
-                  'usps': [200, 1e-3, 30]}
+                  'usps': [200, 1e-3, 30],
+                  'cocs':[200, 1e-4, 100],
+                 }
     args.max_epoch = param_dict[args.dataset_name][0]
     args.lr = param_dict[args.dataset_name][1]
     args.n_input = param_dict[args.dataset_name][2]
